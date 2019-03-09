@@ -1,0 +1,12 @@
+name: GaTAPM
+main: chaca142\GaTAPM
+author: chaca142
+version: 1.2.0
+api:
+  - 3.5.5
+description: Give and Take All Player Money
+commands:
+  gapm:
+    description: "オンライン中のプレイヤーにお金を配布"
+  tapm:
+    description: "オンライン中のプレイヤーからお金を没収"
