@@ -43,17 +43,17 @@ class GaTAPM extends PluginBase implements Listener{
                        return false;
                    }else{
                        if(!$this->getServer()->getOnlinePlayers()) return false;
-                       foreach($this->getServer()->getOnlinePlayers() as $name);
+                       foreach($this->getServer()->getOnlinePlayers() as $player);
                        $mp = $this->set->get("Plugin");
 
                        if ($mp == "EconomyAPI"){
-                           EconomyAPI::getInstance()->addMoney($name, $args[0]);
+                           EconomyAPI::getInstance()->addMoney($player, $args[0]);
                            $this->getServer()->broadcastMessage("§aオンライン中の全プレイヤーに＄".$args[0]."を配りました");
                            return false;
                        }
 
                        if ($mp == "MixCoinSystem"){
-                           MixCoinSystem::getInstance()->PlusCoin($name, $args[0]);
+                           MixCoinSystem::getInstance()->PlusCoin($player, $args[0]);
                            $this->getServer()->broadcastMessage("§aオンライン中の全プレイヤーに＄".$args[0]."を配りました");
                            return false;
                        }
@@ -65,17 +65,17 @@ class GaTAPM extends PluginBase implements Listener{
                        return false;
                    }else{
                        if (!$this->getServer()->getOnlinePlayers()) return false;
-                       foreach($this->getServer()->getOnlinePlayers() as $name);
+                       foreach($this->getServer()->getOnlinePlayers() as $player2)
                        $mp = $this->set->get("Plugin");
 
                        if ($mp == "EconomyAPI"){
-                           EconomyAPI::getInstance()->reduceMoney($name, $args[0]);
+                           EconomyAPI::getInstance()->reduceMoney($player2, $args[0]);
                            $this->getServer()->broadcastMessage("§aオンライン中の全プレイヤーから＄".$args[0]."減らしました");
                            return false;
                        }
 
                        if ($mp == "MixCoinSystem"){
-                           MixCoinSystem::getInstance()->MinusCoin($name, $args[0]);
+                           MixCoinSystem::getInstance()->MinusCoin($player2, $args[0]);
                            $this->getServer()->broadcastMessage("§aオンライン中の全プレイヤーから＄".$args[0]."減らしました");
                            return false;
                        }

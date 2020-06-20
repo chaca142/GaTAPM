@@ -1,7 +1,7 @@
 name: GaTAPM
 main: chaca142\GaTAPM
 author: chaca142
-version: 1.2.0
+version: 2.0.0
 api: 3.11.6
 description: Give and Take All Player Money
 commands:
