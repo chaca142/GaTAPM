@@ -57,6 +57,12 @@ class GaTAPM extends PluginBase implements Listener{
                            $this->getServer()->broadcastMessage("§aオンライン中の全プレイヤーに＄".$args[0]."を配りました");
                            return false;
                        }
+
+                       if ($mp == "MoneySystem"){
+                           API::getInstance()->increase($player, $args[0]);
+                           $this->getServer()->broadcastMessage("§aオンライン中の全プレイヤーに＄".$args[0]."を配りました");
+                           return false;
+                       }
                    }
                    return false;
                case "tapm":
@@ -76,6 +82,12 @@ class GaTAPM extends PluginBase implements Listener{
 
                        if ($mp == "MixCoinSystem"){
                            MixCoinSystem::getInstance()->MinusCoin($player2, $args[0]);
+                           $this->getServer()->broadcastMessage("§aオンライン中の全プレイヤーから＄".$args[0]."減らしました");
+                           return false;
+                       }
+
+                       if ($mp == "MoneySystem"){
+                           API::getInstance()->reduce($player2, $args[0]);
                            $this->getServer()->broadcastMessage("§aオンライン中の全プレイヤーから＄".$args[0]."減らしました");
                            return false;
                        }
